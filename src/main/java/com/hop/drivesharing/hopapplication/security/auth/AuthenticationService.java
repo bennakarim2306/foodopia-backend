@@ -7,18 +7,15 @@ import com.hop.drivesharing.hopapplication.rest.v1.dto.AuthenticationRequest;
 import com.hop.drivesharing.hopapplication.rest.v1.dto.AuthenticationResponse;
 import com.hop.drivesharing.hopapplication.rest.v1.errorHandling.ErrorCode;
 import com.hop.drivesharing.hopapplication.security.JwtService;
-import com.hop.drivesharing.hopapplication.user.Role;
-import com.hop.drivesharing.hopapplication.user.User;
-import com.hop.drivesharing.hopapplication.user.UserRepository;
+import com.hop.drivesharing.hopapplication.data.user.Role;
+import com.hop.drivesharing.hopapplication.data.user.User;
+import com.hop.drivesharing.hopapplication.data.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 import static com.hop.drivesharing.hopapplication.rest.v1.errorHandling.ErrorCode.UNREGISTERED_USER;
 

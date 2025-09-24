@@ -1,8 +1,10 @@
 package com.hop.drivesharing.hopapplication.rest.v1;
 
+import com.hop.drivesharing.hopapplication.exception.AddContactToListException;
 import com.hop.drivesharing.hopapplication.rest.v1.dto.AccountInformationResponse;
 import com.hop.drivesharing.hopapplication.service.AccountService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,16 +18,25 @@ public class AccountController {
         this.accountService = accountService;
     }
 
-    @PostMapping("/addFriend/{email}")
-    public void addContactByEmail(@RequestHeader("Authorization") String authHeader, @PathVariable String email) throws Exception {
-        // TODO send a friend add request to User
-        AccountInformationResponse accountInformationResponse = accountService.generateContactRequest(authHeader, email);
-        accountInformationResponse.setEmail(email);
+@PostMapping("/addContact")
+public ResponseEntity<String> addContactByEmail(@RequestHeader("Authorization") String authHeader, @RequestParam String email) {
+    try {
+        accountService.addContactToList(authHeader, email);
+        return ResponseEntity.ok("Contact request sent successfully.");
+    } catch (AddContactToListException e) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found: " + email);
+    }
+}
+    @GetMapping("/contactsList")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<AccountInformationResponse> getContactsList(@RequestHeader("Authorization") String authHeader) {
+        return ResponseEntity.ok().body(accountService.getContactsList(authHeader));
     }
 
-    @GetMapping("/friendsList")
-    @ResponseStatus(HttpStatus.OK)
-    public AccountInformationResponse getFriendsList(@RequestHeader("Authorization") String authHeader) {
-        return accountService.getFriendsList(authHeader);
+    // erstelle eine Api, die es ermöglicht, die Kontakte eines Benutzers zu löschen// erstelle eine Api, die es ermöglicht, die Kontakte eines Benutzers zu löschen
+    @DeleteMapping("/deleteContact/{email}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteContact(@RequestHeader("Authorization") String authHeader, @PathVariable String email) {
+        accountService.deleteContact(authHeader, email);
     }
 }

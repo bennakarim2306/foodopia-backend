@@ -1,0 +1,245 @@
+{
+    "items": [
+      {
+        "id": 101,
+        "name": "Organic Tomatoes",
+        "type": "vegetable",
+        "quantity": {
+          "amount": 50,
+          "unit": "kg"
+        },
+        "pricePerUnit": 2.5,
+        "unit": "kg",
+        "producerId": 1
+      },
+      {
+        "id": 102,
+        "name": "Free-Range Eggs",
+        "type": "animal product",
+        "quantity": {
+          "amount": 120,
+          "unit": "egg"
+        },
+        "pricePerUnit": 0.3,
+        "unit": "egg",
+        "producerId": 1
+      },
+      {
+        "id": 103,
+        "name": "Raw Honey",
+        "type": "animal product",
+        "quantity": {
+          "amount": 30,
+          "unit": "kg"
+        },
+        "pricePerUnit": 15,
+        "unit": "kg",
+        "producerId": 2
+      },
+      {
+        "id": 104,
+        "name": "Fresh Strawberries",
+        "type": "fruit",
+        "quantity": {
+          "amount": 20,
+          "unit": "kg"
+        },
+        "pricePerUnit": 4,
+        "unit": "kg",
+        "producerId": 3
+      },
+      {
+        "id": 105,
+        "name": "Homegrown Zucchini",
+        "type": "vegetable",
+        "quantity": {
+          "amount": 40,
+          "unit": "kg"
+        },
+        "pricePerUnit": 1.8,
+        "unit": "kg",
+        "producerId": 4
+      },
+      {
+        "id": 106,
+        "name": "Fresh Basil",
+        "type": "herb",
+        "quantity": {
+          "amount": 5,
+          "unit": "kg"
+        },
+        "pricePerUnit": 12,
+        "unit": "kg",
+        "producerId": 5
+      },
+      {
+        "id": 107,
+        "name": "Free-Range Chicken Meat",
+        "type": "animal product",
+        "quantity": {
+          "amount": 25,
+          "unit": "kg"
+        },
+        "pricePerUnit": 7,
+        "unit": "kg",
+        "producerId": 6
+      },
+      {
+        "id": 108,
+        "name": "Fresh Blueberries",
+        "type": "fruit",
+        "quantity": {
+          "amount": 15,
+          "unit": "kg"
+        },
+        "pricePerUnit": 6,
+        "unit": "kg",
+        "producerId": 7
+      },
+      {
+        "id": 109,
+        "name": "Fresh Goat Milk",
+        "type": "dairy",
+        "quantity": {
+          "amount": 30,
+          "unit": "liters"
+        },
+        "pricePerUnit": 1.5,
+        "unit": "liter",
+        "producerId": 8
+      },
+      {
+        "id": 110,
+        "name": "Sweet Potatoes",
+        "type": "vegetable",
+        "quantity": {
+          "amount": 80,
+          "unit": "kg"
+        },
+        "pricePerUnit": 2,
+        "unit": "kg",
+        "producerId": 9
+      },
+      {
+        "id": 111,
+        "name": "Fresh Apples",
+        "type": "fruit",
+        "quantity": {
+          "amount": 100,
+          "unit": "kg"
+        },
+        "pricePerUnit": 3,
+        "unit": "kg",
+        "producerId": 10
+      },
+      {
+        "id": 112,
+        "name": "Fresh Kale",
+        "type": "vegetable",
+        "quantity": {
+          "amount": 20,
+          "unit": "kg"
+        },
+        "pricePerUnit": 2.5,
+        "unit": "kg",
+        "producerId": 11
+      },
+      {
+        "id": 113,
+        "name": "Raw Almonds",
+        "type": "nut",
+        "quantity": {
+          "amount": 10,
+          "unit": "kg"
+        },
+        "pricePerUnit": 15,
+        "unit": "kg",
+        "producerId": 12
+      },
+      {
+        "id": 114,
+        "name": "Cucumbers",
+        "type": "vegetable",
+        "quantity": {
+          "amount": 60,
+          "unit": "kg"
+        },
+        "pricePerUnit": 1.8,
+        "unit": "kg",
+        "producerId": 13
+      },
+      {
+        "id": 115,
+        "name": "Fresh Peaches",
+        "type": "fruit",
+        "quantity": {
+          "amount": 50,
+          "unit": "kg"
+        },
+        "pricePerUnit": 3.5,
+        "unit": "kg",
+        "producerId": 14
+      },
+      {
+        "id": 116,
+        "name": "Fresh Mint Leaves",
+        "type": "herb",
+        "quantity": {
+          "amount": 5,
+          "unit": "kg"
+        },
+        "pricePerUnit": 10,
+        "unit": "kg",
+        "producerId": 15
+      },
+      {
+        "id": 117,
+        "name": "Fresh Pears",
+        "type": "fruit",
+        "quantity": {
+          "amount": 60,
+          "unit": "kg"
+        },
+        "pricePerUnit": 3.2,
+        "unit": "kg",
+        "producerId": 16
+      },
+      {
+        "id": 118,
+        "name": "Fresh Spinach",
+        "type": "vegetable",
+        "quantity": {
+          "amount": 30,
+          "unit": "kg"
+        },
+        "pricePerUnit": 3,
+        "unit": "kg",
+        "producerId": 17
+      },
+      {
+        "id": 119,
+        "name": "Fresh Carrots",
+        "type": "vegetable",
+        "quantity": {
+          "amount": 70,
+          "unit": "kg"
+        },
+        "pricePerUnit": 1.7,
+        "unit": "kg",
+        "producerId": 18
+      },
+      {
+        "id": 120,
+        "name": "Raw Cashews",
+        "type": "nut",
+        "quantity": {
+          "amount": 15,
+          "unit": "kg"
+        },
+        "pricePerUnit": 12,
+        "unit": "kg",
+        "producerId": 19
+      }
+    ]
+  }
+  

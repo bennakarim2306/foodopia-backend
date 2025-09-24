@@ -6,8 +6,8 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 /**
- * this data represents for example the friend object in the response delivered when calling get friends list
- * or when being notified for a friend add request vie webSocket
+ * this data represents for example the Contact object in the response delivered when calling get Contacts list
+ * or when being notified for a Contact add request vie webSocket
  */
 @Data
 @AllArgsConstructor

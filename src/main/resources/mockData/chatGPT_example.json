@@ -1,0 +1,111 @@
+{
+  "producers": [
+    {
+      "id": 1,
+      "name": "Green Valley Farms",
+      "contact": {
+        "email": "contact@greenvalley.com",
+        "phone": "+351 912345678"
+      },
+      "address": {
+        "street": "Rua das Hortas",
+        "city": "Faro",
+        "district": "Faro",
+        "postalCode": "8000-123"
+      },
+      "products": [
+        {
+          "id": 101,
+          "name": "Organic Tomatoes",
+          "type": "vegetable",
+          "quantity": {
+            "amount": 50,
+            "unit": "kg"
+          },
+          "pricePerUnit": 2.5,
+          "unit": "kg"
+        },
+        {
+          "id": 102,
+          "name": "Free-Range Eggs",
+          "type": "animal product",
+          "quantity": {
+            "amount": 120,
+            "unit": "egg"
+          },
+          "pricePerUnit": 0.3,
+          "unit": "egg"
+        }
+      ],
+      "ratings": {
+        "averageRating": 4.8,
+        "reviews": 25
+      }
+    }
+  ],
+  "consumers": [
+    {
+      "id": 1,
+      "name": "Hannah Benna",
+      "contact": {
+        "email": "hannah.benna@example.com",
+        "phone": "+351 923456789"
+      },
+      "address": {
+        "street": "Rua das Flores",
+        "city": "Portimão",
+        "district": "Faro",
+        "postalCode": "8500-321"
+      },
+      "preferences": {
+        "favoriteProducts": ["vegetable", "fruit"],
+        "deliveryPreferences": {
+          "deliveryTime": "18:00-20:00",
+          "deliveryNotes": "Ring the doorbell twice."
+        }
+      },
+      "orderHistory": [
+        {
+          "orderId": 2001,
+          "date": "2025-01-15",
+          "products": [
+            {
+              "productId": 101,
+              "name": "Organic Tomatoes",
+              "quantity": "5kg",
+              "price": 12.5
+            }
+          ],
+          "totalPrice": 12.5,
+          "deliveryServiceId": 1
+        }
+      ]
+    }
+  ],
+  "deliveryServices": [
+    {
+      "id": 1,
+      "name": "FreshFast Delivery",
+      "contact": {
+        "email": "support@freshfastdelivery.com",
+        "phone": "+351 934567890"
+      },
+      "serviceArea": ["Faro", "Portimão", "Lagos"],
+      "vehicles": [
+        {
+          "id": 301,
+          "type": "electric van",
+          "capacity": "500kg"
+        }
+      ],
+      "pricing": {
+        "baseFee": 5.0,
+        "feePerKm": 0.5
+      },
+      "ratings": {
+        "averageRating": 4.5,
+        "reviews": 150
+      }
+    }
+  ]
+}

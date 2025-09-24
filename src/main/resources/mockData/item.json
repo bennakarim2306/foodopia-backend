@@ -1,0 +1,12 @@
+{
+    "id": 101,
+    "name": "Organic Tomatoes",
+    "type": "vegetable",
+    "quantity": {
+        "amount": 50,
+        "unit": "kg"
+    },
+    "pricePerUnit": 2.5,
+    "unit": "kg",
+    "producerId": 1
+}

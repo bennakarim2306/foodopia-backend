@@ -1,0 +1,145 @@
+{
+    "producers": [
+      {
+        "id": 1,
+        "name": "Algarve Fresh Produce",
+        "address": {
+          "street": "Rua das Laranjeiras, 45",
+          "city": "Faro",
+          "postalCode": "8000-123",
+          "country": "Portugal",
+          "latitude": 37.019356,
+          "longitude": -7.930439
+        },
+        "phone": "+351 912 345 678",
+        "email": "contact@algarvefresh.com"
+      },
+      {
+        "id": 2,
+        "name": "Horta do Sol",
+        "address": {
+          "street": "Estrada da Praia, 22",
+          "city": "Lagos",
+          "postalCode": "8600-321",
+          "country": "Portugal",
+          "latitude": 37.101780,
+          "longitude": -8.673860
+        },
+        "phone": "+351 934 567 890",
+        "email": "info@hortadosol.pt"
+      },
+      {
+        "id": 3,
+        "name": "Monte Verde Organics",
+        "address": {
+          "street": "Caminho da Serra, 12",
+          "city": "Albufeira",
+          "postalCode": "8200-456",
+          "country": "Portugal",
+          "latitude": 37.089070,
+          "longitude": -8.247880
+        },
+        "phone": "+351 927 890 123",
+        "email": "support@monteverde.pt"
+      },
+      {
+        "id": 4,
+        "name": "Quinta do Mar",
+        "address": {
+          "street": "Largo do Pescador, 7",
+          "city": "Portimão",
+          "postalCode": "8500-789",
+          "country": "Portugal",
+          "latitude": 37.136490,
+          "longitude": -8.537760
+        },
+        "phone": "+351 965 234 567",
+        "email": "sales@quintadomar.pt"
+      },
+      {
+        "id": 5,
+        "name": "Vale Verde Farm",
+        "address": {
+          "street": "Travessa dos Campos, 18",
+          "city": "Tavira",
+          "postalCode": "8800-654",
+          "country": "Portugal",
+          "latitude": 37.125550,
+          "longitude": -7.650990
+        },
+        "phone": "+351 938 456 789",
+        "email": "vale.verde@farmalgarve.com"
+      },
+      {
+        "id": 6,
+        "name": "Casa da Horta",
+        "address": {
+          "street": "Rua do Mercado, 3",
+          "city": "Olhão",
+          "postalCode": "8700-987",
+          "country": "Portugal",
+          "latitude": 37.028960,
+          "longitude": -7.841280
+        },
+        "phone": "+351 964 789 012",
+        "email": "hello@casadahorta.pt"
+      },
+      {
+        "id": 7,
+        "name": "Hortas de Lagoa",
+        "address": {
+          "street": "Estrada Nacional 125, 19",
+          "city": "Lagoa",
+          "postalCode": "8400-213",
+          "country": "Portugal",
+          "latitude": 37.136960,
+          "longitude": -8.450800
+        },
+        "phone": "+351 917 654 321",
+        "email": "info@hortasdelagoa.pt"
+      },
+      {
+        "id": 8,
+        "name": "Fresh Algarve",
+        "address": {
+          "street": "Avenida das Palmeiras, 33",
+          "city": "Vilamoura",
+          "postalCode": "8125-432",
+          "country": "Portugal",
+          "latitude": 37.089160,
+          "longitude": -8.117930
+        },
+        "phone": "+351 932 123 456",
+        "email": "contact@freshalgarve.pt"
+      },
+      {
+        "id": 9,
+        "name": "Farm to Table Algarve",
+        "address": {
+          "street": "Rua do Campo, 78",
+          "city": "Silves",
+          "postalCode": "8300-345",
+          "country": "Portugal",
+          "latitude": 37.189370,
+          "longitude": -8.438450
+        },
+        "phone": "+351 968 345 678",
+        "email": "support@farmtotable.pt"
+      },
+      {
+        "id": 10,
+        "name": "Bio Algarve Market",
+        "address": {
+          "street": "Praça Central, 56",
+          "city": "Quarteira",
+          "postalCode": "8125-876",
+          "country": "Portugal",
+          "latitude": 37.068830,
+          "longitude": -8.101110
+        },
+        "phone": "+351 923 567 890",
+        "email": "bio@algarvemarket.pt"
+      }
+    ]
+  }
+  

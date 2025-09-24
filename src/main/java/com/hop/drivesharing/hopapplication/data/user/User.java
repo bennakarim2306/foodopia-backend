@@ -1,4 +1,4 @@
-package com.hop.drivesharing.hopapplication.user;
+package com.hop.drivesharing.hopapplication.data.user;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -37,19 +37,19 @@ public class User implements UserDetails {
 
     private boolean consentAllowed;
 
-    private String friendsList;
+    private String ContactsList;
 
-    private String friendsRequestList;
-
-    @Transient
-    @Getter
-    @Setter
-    private List<String> friendsIdsList;
+    private String ContactsRequestList;
 
     @Transient
     @Getter
     @Setter
-    private List<String> friendsRequestsIdsList;
+    private List<String> ContactsIdsList;
+
+    @Transient
+    @Getter
+    @Setter
+    private List<String> ContactsRequestsIdsList;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -85,12 +85,12 @@ public class User implements UserDetails {
     }
 
     @PostLoad
-    private void parseFriendsListIds () {
-        if(this.friendsList != null) {
-            this.friendsIdsList = Arrays.stream(this.getFriendsList().split("\\|")).toList();
+    private void parseContactsListIds () {
+        if(this.ContactsList != null) {
+            this.ContactsIdsList = Arrays.stream(this.getContactsList().split("\\|")).toList();
         }
-        if(this.friendsRequestList != null) {
-            this.friendsRequestsIdsList = Arrays.stream(this.getFriendsRequestList().split("\\|")).toList();
+        if(this.ContactsRequestList != null) {
+            this.ContactsRequestsIdsList = Arrays.stream(this.getContactsRequestList().split("\\|")).toList();
         }
     }
 }
