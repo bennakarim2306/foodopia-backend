@@ -1,3 +1,4 @@
+// src/main/java/com/hop/drivesharing/hopapplication/config/SecurityConfig.java
 package com.hop.drivesharing.hopapplication.config;
 
 import com.hop.drivesharing.hopapplication.security.JwtAuthenticationFilter;
@@ -24,8 +25,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authz ->
-                        authz.requestMatchers("/api/v1/auth/**", "/api/v1/account/**")
-                                .permitAll()
+                        authz
+                                .requestMatchers("/api/v1/auth/**", "/api/v1/account/**","/api/v1/items/**").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -33,5 +34,4 @@ public class SecurityConfig {
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return httpSecurity.build();
     }
-
 }

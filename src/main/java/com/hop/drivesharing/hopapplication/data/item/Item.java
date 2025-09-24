@@ -24,6 +24,13 @@ public class Item {
     private String unit;
 
     @Embedded
+    @AttributeOverrides({
+        @AttributeOverride(name = "street", column = @Column(name = "address_street")),
+        @AttributeOverride(name = "city", column = @Column(name = "address_city")),
+        @AttributeOverride(name = "zip", column = @Column(name = "address_zip")),
+        @AttributeOverride(name = "lat", column = @Column(name = "address_lat")),
+        @AttributeOverride(name = "lng", column = @Column(name = "address_lng"))
+    })
     private Address address;
 
     @Embedded
@@ -34,10 +41,15 @@ public class Item {
     })
     private Seller seller;
 
+    @Column(name = "availablefrom")
     private java.time.LocalDate availableFrom;
+
+    @Column(name = "availableto")
     private java.time.LocalDate availableTo;
 
     private String description;
+
+    @Column(name = "imageurl")
     private String imageUrl;
 
     // Getters and Setters
