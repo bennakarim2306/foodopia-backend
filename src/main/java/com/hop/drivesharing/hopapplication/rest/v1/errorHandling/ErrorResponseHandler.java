@@ -43,9 +43,8 @@ public class ErrorResponseHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new AuthenticationErrorResponse(errorMessage, ErrorCode.INPUT_VALIDATION_ERROR));
     }
 
-    @ExceptionHandler(value = {AddFriendToListException.class})
-    protected ResponseEntity<RestErrorResponse> handleAddFriendException(Exception e, HttpServletRequest request) {
+    @ExceptionHandler(value = {AddContactToListException.class})
+    protected ResponseEntity<RestErrorResponse> handleAddContactException(Exception e, HttpServletRequest request) {
         return ResponseEntity.badRequest().body(RestErrorResponse.builder().message(e.getMessage()).build());
     }
-
 }

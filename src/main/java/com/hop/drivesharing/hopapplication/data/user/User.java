@@ -1,16 +1,15 @@
-package com.hop.drivesharing.hopapplication.user;
+package com.hop.drivesharing.hopapplication.data.user;
 
 import jakarta.persistence.*;
+import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.sql.Date;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-
-import lombok.*;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 @Data
 @NoArgsConstructor
@@ -38,12 +37,19 @@ public class User implements UserDetails {
 
     private boolean consentAllowed;
 
-    private String friendsList;
+    private String ContactsList;
+
+    private String ContactsRequestList;
 
     @Transient
     @Getter
     @Setter
-    private List<String> friendsIdsList;
+    private List<String> ContactsIdsList;
+
+    @Transient
+    @Getter
+    @Setter
+    private List<String> ContactsRequestsIdsList;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -79,9 +85,12 @@ public class User implements UserDetails {
     }
 
     @PostLoad
-    private void parseFriendsListIds () {
-        if(this.friendsList != null) {
-            this.friendsIdsList = Arrays.stream(this.getFriendsList().split("\\|")).toList();
+    private void parseContactsListIds () {
+        if(this.ContactsList != null) {
+            this.ContactsIdsList = Arrays.stream(this.getContactsList().split("\\|")).toList();
+        }
+        if(this.ContactsRequestList != null) {
+            this.ContactsRequestsIdsList = Arrays.stream(this.getContactsRequestList().split("\\|")).toList();
         }
     }
 }

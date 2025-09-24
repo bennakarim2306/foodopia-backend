@@ -1,0 +1,83 @@
+{
+    "orders": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "product": {
+        "id": 101,
+        "name": "Organic Tomatoes",
+        "type": "vegetable",
+        "quantity": {
+          "amount": 10,
+          "unit": "kg"
+        },
+        "pricePerUnit": 2.5,
+        "unit": "kg",
+        "producerId": 1
+      },
+      "flags": {
+        "producerConfirmed": true,
+        "deliveryNeeded": true
+      },
+      "delivery": {
+        "status": "pending",
+        "service": "Green Couriers",
+        "expectedDeliveryDate": "2025-01-25"
+      },
+      "orderStatus": "awaiting_delivery",
+      "initDate": "2025-01-20",
+      "finishDate": null
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "product": {
+        "id": 103,
+        "name": "Fresh Strawberries",
+        "type": "fruit",
+        "quantity": {
+          "amount": 5,
+          "unit": "kg"
+        },
+        "pricePerUnit": 3.0,
+        "unit": "kg",
+        "producerId": 2
+      },
+      "flags": {
+        "producerConfirmed": false,
+        "deliveryNeeded": false
+      },
+      "delivery": {
+        "status": "not_applicable"
+      },
+      "orderStatus": "waiting_producer_confirmation",
+      "initDate": "2025-01-18",
+      "finishDate": null
+    },
+    {
+      "id": 3,
+      "customerId": 1,
+      "product": {
+        "id": 105,
+        "name": "Free-Range Eggs",
+        "type": "animal product",
+        "quantity": {
+          "amount": 30,
+          "unit": "pcs"
+        },
+        "pricePerUnit": 0.5,
+        "unit": "pcs",
+        "producerId": 3
+      },
+      "flags": {
+        "producerConfirmed": true,
+        "deliveryNeeded": false
+      },
+      "delivery": {
+        "status": "not_applicable"
+      },
+      "orderStatus": "completed",
+      "initDate": "2025-01-15",
+      "finishDate": "2025-01-20"
+    }]
+}

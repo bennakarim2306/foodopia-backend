@@ -1,0 +1,29 @@
+{
+    "name": {
+        "language": "en",
+        "value": "cranberry"
+    },
+    "vendor": {
+        "name": "vendor1",
+        "id": "1234",
+        "location": {
+            "city": "city1",
+            "state": "state1",
+            "country": "country1",
+            "street": "street1",
+            "zip": "zip1",
+            "house_number": "house1",
+            "lattitude": "lat1",
+            "longitude": "long1"
+        },
+        "contact": {
+            "phone": "phone1",
+            "email": "email1",
+            "website": "website1"
+        }
+    },
+    "quantity": {
+        "type": "piece",
+        "value": "10"
+    }
+}
