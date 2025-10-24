@@ -2,6 +2,7 @@ package com.hop.drivesharing.hopapplication.rest.v1;
 
 import com.hop.drivesharing.hopapplication.exception.AddContactToListException;
 import com.hop.drivesharing.hopapplication.rest.v1.dto.AccountInformationResponse;
+import com.hop.drivesharing.hopapplication.rest.v1.dto.AddressDto;
 import com.hop.drivesharing.hopapplication.service.AccountService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,5 +39,38 @@ public ResponseEntity<String> addContactByEmail(@RequestHeader("Authorization") 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteContact(@RequestHeader("Authorization") String authHeader, @PathVariable String email) {
         accountService.deleteContact(authHeader, email);
+    }
+
+    // src/main/java/com/hop/drivesharing/hopapplication/rest/v1/AccountController.java
+
+    @PostMapping("/setAddressByUserId/{userId}")
+    public ResponseEntity<Void> setAddressByUserId(@RequestHeader("Authorization") String authHeader,
+                                                   @PathVariable String userId,
+                                                   @RequestBody AddressDto addressDto) {
+        accountService.setAddressByUserId(authHeader, userId, addressDto);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/setAddressByEmail")
+    public ResponseEntity<Void> setAddressByEmail(@RequestHeader("Authorization") String authHeader,
+                                                  @RequestBody AddressDto addressDto) {
+        accountService.setAddressByEmail(authHeader, addressDto);
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/getAddressByUserId/{userId}")
+    public ResponseEntity<AddressDto> getAddressByUserId(@RequestHeader("Authorization") String authHeader,
+                                                         @PathVariable String userId) {
+        AddressDto address = accountService.getAddressByUserId(authHeader, userId);
+        return ResponseEntity.ok(address);
+    }
+
+    @GetMapping("/getAddressByEmail")
+    public ResponseEntity<AddressDto> getAddressByEmail(@RequestHeader("Authorization") String authHeader) {
+        AddressDto address = accountService.getAddressByEmail(authHeader);
+        if (address == null) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(address);
     }
 }

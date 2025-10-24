@@ -5,6 +5,8 @@ import com.hop.drivesharing.hopapplication.data.user.UserRepository;
 import com.hop.drivesharing.hopapplication.exception.AddContactToListException;
 import com.hop.drivesharing.hopapplication.rest.v1.dto.AccountInformationResponse;
 import com.hop.drivesharing.hopapplication.rest.v1.dto.UserLight;
+import com.hop.drivesharing.hopapplication.rest.v1.dto.AddressDto;
+import com.hop.drivesharing.hopapplication.data.item.Address;
 import com.hop.drivesharing.hopapplication.security.JwtService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -101,6 +103,32 @@ public class AccountService {
         userRepository.save(user);
     }
 
+    public void setAddressByUserId(String authHeader, String userId, AddressDto addressDto) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found: " + userId));
+        user.setAddress(mapToAddress(addressDto));
+        userRepository.save(user);
+    }
+
+    public void setAddressByEmail(String authHeader, AddressDto addressDto) {
+        String email = jwtService.extractUserEmail(authHeader.substring(7)); // "sub"-Claim extrahieren
+        User user = findUserByEmail(email);
+        user.setAddress(mapToAddress(addressDto));
+        userRepository.save(user);
+    }
+
+    public AddressDto getAddressByUserId(String authHeader, String userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found: " + userId));
+        return mapToAddressDto(user.getAddress());
+    }
+
+    public AddressDto getAddressByEmail(String authHeader) {
+        String email = jwtService.extractUserEmail(authHeader.substring(7)); // "sub"-Claim extrahieren
+        User user = findUserByEmail(email);
+        return mapToAddressDto(user.getAddress());
+    }
+
     // Private helper methods
 
     private String extractUserEmail(String authHeader) {
@@ -146,5 +174,27 @@ public class AccountService {
                 .lastName(user.getLastName())
                 .email(user.getEmail())
                 .build();
+    }
+
+    private Address mapToAddress(AddressDto dto) {
+        if (dto == null) return null;
+        return Address.builder()
+                .city(dto.getCity())
+                .street(dto.getStreet())
+                .zip(dto.getZip())
+                .lat(dto.getLat())
+                .lng(dto.getLng())
+                .build();
+    }
+
+    private AddressDto mapToAddressDto(Address address) {
+        if (address == null) return null;
+        AddressDto dto = new AddressDto();
+        dto.setCity(address.getCity());
+        dto.setStreet(address.getStreet());
+        dto.setZip(address.getZip());
+        dto.setLat(address.getLat());
+        dto.setLng(address.getLng());
+        return dto;
     }
 }

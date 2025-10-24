@@ -1,5 +1,6 @@
 package com.hop.drivesharing.hopapplication.data.user;
 
+import com.hop.drivesharing.hopapplication.data.item.Address;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -53,6 +54,17 @@ public class User implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "street", column = @Column(name = "address_street")),
+            @AttributeOverride(name = "city", column = @Column(name = "address_city")),
+            @AttributeOverride(name = "zip", column = @Column(name = "address_zip")),
+            @AttributeOverride(name = "lat", column = @Column(name = "address_lat")),
+            @AttributeOverride(name = "lng", column = @Column(name = "address_lng"))
+    })
+    private Address address;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

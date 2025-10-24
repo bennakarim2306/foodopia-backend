@@ -1,0 +1,10 @@
+@startuml
+actor Client
+participant AccountController
+participant AccountService
+
+Client -> AccountController: DELETE /api/v1/account/deleteContact/{email}
+AccountController -> AccountService: deleteContact(authHeader, email)
+AccountService --> AccountController: (void)
+AccountController --> Client: 204 NO_CONTENT
+@enduml

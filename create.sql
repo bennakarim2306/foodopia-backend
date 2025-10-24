@@ -413,3 +413,218 @@ ALTER TABLE business_data.items DROP COLUMN city;
         role varchar(255) check (role in ('USER','ADMIN')),
         primary key (id)
     );
+ALTER TABLE user_details."user-details"
+    ADD COLUMN address_street VARCHAR(255),
+    ADD COLUMN address_city VARCHAR(255),
+    ADD COLUMN address_zip VARCHAR(20),
+    ADD COLUMN address_lat DOUBLE PRECISION,
+    ADD COLUMN address_lng DOUBLE PRECISION;
+    create table business_data.items (
+        address_lat float(53),
+        address_lng float(53),
+        availablefrom date,
+        availableto date,
+        price float(53) not null,
+        quantity float(53) not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        description varchar(255),
+        id varchar(255) not null,
+        imageurl varchar(255),
+        name varchar(255),
+        seller_contact varchar(255),
+        seller_id varchar(255),
+        seller_name varchar(255),
+        type varchar(255),
+        unit varchar(255),
+        primary key (id)
+    );
+
+    create table user_details."user-details" (
+        address_lat float(53),
+        address_lng float(53),
+        age integer,
+        birth_day date,
+        consent_allowed boolean not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        contacts_list varchar(255),
+        contacts_request_list varchar(255),
+        email varchar(255),
+        first_name varchar(255),
+        id varchar(255) not null,
+        last_name varchar(255),
+        password varchar(255),
+        role varchar(255) check (role in ('USER','ADMIN')),
+        primary key (id)
+    );
+
+    create table business_data.items (
+        address_lat float(53),
+        address_lng float(53),
+        availablefrom date,
+        availableto date,
+        price float(53) not null,
+        quantity float(53) not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        description varchar(255),
+        id varchar(255) not null,
+        imageurl varchar(255),
+        name varchar(255),
+        seller_contact varchar(255),
+        seller_id varchar(255),
+        seller_name varchar(255),
+        type varchar(255),
+        unit varchar(255),
+        primary key (id)
+    );
+
+    create table user_details."user-details" (
+        address_lat float(53),
+        address_lng float(53),
+        age integer,
+        birth_day date,
+        consent_allowed boolean not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        contacts_list varchar(255),
+        contacts_request_list varchar(255),
+        email varchar(255),
+        first_name varchar(255),
+        id varchar(255) not null,
+        last_name varchar(255),
+        password varchar(255),
+        role varchar(255) check (role in ('USER','ADMIN')),
+        primary key (id)
+    );
+
+    create table business_data.items (
+        address_lat float(53),
+        address_lng float(53),
+        availablefrom date,
+        availableto date,
+        price float(53) not null,
+        quantity float(53) not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        description varchar(255),
+        id varchar(255) not null,
+        imageurl varchar(255),
+        name varchar(255),
+        seller_contact varchar(255),
+        seller_id varchar(255),
+        seller_name varchar(255),
+        type varchar(255),
+        unit varchar(255),
+        primary key (id)
+    );
+
+    create table user_details."user-details" (
+        address_lat float(53),
+        address_lng float(53),
+        age integer,
+        birth_day date,
+        consent_allowed boolean not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        contacts_list varchar(255),
+        contacts_request_list varchar(255),
+        email varchar(255),
+        first_name varchar(255),
+        id varchar(255) not null,
+        last_name varchar(255),
+        password varchar(255),
+        role varchar(255) check (role in ('USER','ADMIN')),
+        primary key (id)
+    );
+
+    create table business_data.items (
+        address_lat float(53),
+        address_lng float(53),
+        availablefrom date,
+        availableto date,
+        price float(53) not null,
+        quantity float(53) not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        description varchar(255),
+        id varchar(255) not null,
+        imageurl varchar(255),
+        name varchar(255),
+        seller_contact varchar(255),
+        seller_id varchar(255),
+        seller_name varchar(255),
+        type varchar(255),
+        unit varchar(255),
+        primary key (id)
+    );
+
+    create table user_details."user-details" (
+        address_lat float(53),
+        address_lng float(53),
+        age integer,
+        birth_day date,
+        consent_allowed boolean not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        contacts_list varchar(255),
+        contacts_request_list varchar(255),
+        email varchar(255),
+        first_name varchar(255),
+        id varchar(255) not null,
+        last_name varchar(255),
+        password varchar(255),
+        role varchar(255) check (role in ('USER','ADMIN')),
+        primary key (id)
+    );
+
+    create table business_data.items (
+        address_lat float(53),
+        address_lng float(53),
+        availablefrom date,
+        availableto date,
+        price float(53) not null,
+        quantity float(53) not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        description varchar(255),
+        id varchar(255) not null,
+        imageurl varchar(255),
+        name varchar(255),
+        seller_contact varchar(255),
+        seller_id varchar(255),
+        seller_name varchar(255),
+        type varchar(255),
+        unit varchar(255),
+        primary key (id)
+    );
+
+    create table user_details."user-details" (
+        address_lat float(53),
+        address_lng float(53),
+        age integer,
+        birth_day date,
+        consent_allowed boolean not null,
+        address_city varchar(255),
+        address_street varchar(255),
+        address_zip varchar(255),
+        contacts_list varchar(255),
+        contacts_request_list varchar(255),
+        email varchar(255),
+        first_name varchar(255),
+        id varchar(255) not null,
+        last_name varchar(255),
+        password varchar(255),
+        role varchar(255) check (role in ('USER','ADMIN')),
+        primary key (id)
+    );

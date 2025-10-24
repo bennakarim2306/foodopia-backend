@@ -1,0 +1,10 @@
+@startuml
+actor Client
+participant AccountController
+participant AccountService
+
+Client -> AccountController: GET /api/v1/account/getAddressByUserId/{userId}
+AccountController -> AccountService: getAddressByUserId(authHeader, userId)
+AccountService --> AccountController: AddressDto
+AccountController --> Client: 200 OK (AddressDto)
+@enduml
