@@ -1,0 +1,10 @@
+@startuml
+actor Client
+participant AccountController
+participant AccountService
+
+Client -> AccountController: GET /api/v1/account/contactsList
+AccountController -> AccountService: getContactsList(authHeader)
+AccountService --> AccountController: AccountInformationResponse
+AccountController --> Client: 200 OK (AccountInformationResponse)
+@enduml

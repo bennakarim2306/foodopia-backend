@@ -1,0 +1,10 @@
+@startuml
+actor Client
+participant AccountController
+participant AccountService
+
+Client -> AccountController: POST /api/v1/account/setAddressByEmail
+AccountController -> AccountService: setAddressByEmail(authHeader, addressDto)
+AccountService --> AccountController: (void)
+AccountController --> Client: 200 OK
+@enduml

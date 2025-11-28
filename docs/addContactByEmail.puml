@@ -1,0 +1,14 @@
+@startuml
+actor Client
+participant AccountController
+participant AccountService
+
+Client -> AccountController: POST /api/v1/account/addContact
+AccountController -> AccountService: addContactToList(authHeader, email)
+AccountService --> AccountController: (void / Exception)
+alt Erfolg
+    AccountController --> Client: 200 OK ("Contact request sent successfully.")
+else Fehler (User not found)
+    AccountController --> Client: 404 NOT_FOUND ("User not found: ...")
+end
+@enduml

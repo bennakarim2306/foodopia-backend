@@ -1,0 +1,14 @@
+@startuml
+actor Client
+participant AccountController
+participant AccountService
+
+Client -> AccountController: GET /api/v1/account/getAddressByEmail
+AccountController -> AccountService: getAddressByEmail(authHeader)
+AccountService --> AccountController: AddressDto/null
+alt Adresse vorhanden
+    AccountController --> Client: 200 OK (AddressDto)
+else Keine Adresse
+    AccountController --> Client: 204 NO_CONTENT
+end
+@enduml

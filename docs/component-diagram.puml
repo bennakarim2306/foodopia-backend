@@ -1,0 +1,20 @@
+@startuml
+
+package "UserManagerApplication" {
+  [UserManagerApplication <<Spring Boot>>] as app
+  [UserController <<REST Controller>>] as controller
+  [UserService <<Service>>] as service
+  [UserRepository <<Repository>>] as repo
+  [SQL Database] as db
+  [Security (JWT)] as security
+}
+
+actor User
+
+User --> controller : HTTP Request (REST API)
+controller --> security : Authorization (JWT Bearer)
+controller --> service : Service Calls
+service --> repo : CRUD Operations
+repo --> db : SQL Queries
+
+@enduml
