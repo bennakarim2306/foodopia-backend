@@ -1,0 +1,29 @@
+# fly.toml
+app = "foodopia-backend" # anpassen oder durch `fly launch` generieren
+primary_region = "iad"
+
+[build]
+# fly baut lokal aus dem Dockerfile per default; kein Eintrag nötig
+
+[env]
+# Keine Secrets hier eintragen; z.B. SPRING_PROFILES_ACTIVE kann gesetzt werden
+SPRING_PROFILES_ACTIVE = "fly"
+
+[[services]]
+internal_port = 8080
+protocol = "tcp"
+
+[[services.ports]]
+port = 80
+handlers = ["http"]
+
+[[services.ports]]
+port = 443
+handlers = ["tls"]
+
+[services.concurrency]
+type = "requests"
+soft_limit = 25
+hard_limit = 50
+
+# Optional: Healthchecks (Fly prüft standardmäßig HTTP via handlers)
