@@ -17,6 +17,10 @@ primary_region = 'lhr'
   min_machines_running = 0
   processes = ['app']
 
+# Activate Spring profile "cloud-dev"
+[env]
+  SPRING_PROFILES_ACTIVE = "cloud-dev"
+
 [[vm]]
   memory = '1gb'
   cpu_kind = 'shared'
